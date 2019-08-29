@@ -494,6 +494,7 @@ h3 {font-family: 'Raleway', sans-serif;}
     .banner02 a .m_text {display: none;}
     .notice_menu {height: 144px;}
     .notice_menu ul li {width: 33.3333%; height: 72px; box-sizing: border-box;}
+    .notice_menu ul li:nth-child(3):before {display: none;}
     .notice_menu ul li a {padding: 45px 14px 0;}
     .notice_menu ul li:nth-child(3) a {padding: 35px 14px 0;}
     .notice_menu ul li a:before {width: 50px; height: 50px;}
