@@ -108,8 +108,10 @@ window.onload = function(){
     var navBox = document.querySelector('#header .gnb');
     var navSubBox = document.querySelector('#header .gnb_bg');
     var navSubClose = document.querySelector('#header .gnb_close');
+    var navMcloseBtn = document.querySelector('.m_nav_close_btn a');
     
     navSubClose.addEventListener("click",navBoxClose);
+    navMcloseBtn.addEventListener("click",navBoxClose);
     
     for(var i = 0; i < nav.length; ++i){
         nav[i].addEventListener("mouseover",navSlide);
@@ -117,9 +119,10 @@ window.onload = function(){
     };
 
         function navSlide(){
-            navBox.classList.add('active');
-            navSubBox.classList.add('on');
-            navSubClose.classList.add('on');
+            navBox.className = 'gnb active on';
+            navSubBox.className = 'gnb_bg on';
+            navSubClose.className = 'gnb_close on';
+            navMcloseBtn.className = 'active';
         };
         
         // nav li 에 마우스가 닿았을 경우 서브 메뉴 띄워주기
@@ -127,9 +130,9 @@ window.onload = function(){
         navBox.addEventListener("mouseleave",navClose);
         
         function navClose(){
-            navBox.classList.remove('active');
-            navSubBox.classList.remove('on');
-            navSubClose.classList.remove('on');
+            navBox.className = 'gnb on';
+            navSubBox.className = 'gnb_bg';
+            navSubClose.className = 'gnb_close';
         };
         
         // nav li 에 마우스가 벗어났을 경우 서브 메뉴 내려주기
@@ -150,13 +153,14 @@ window.onload = function(){
     function navBoxClose(e){
         e.preventDefault();
         
-        navBox.classList.remove('active');
-        navSubBox.classList.remove('on');
-        navSubClose.classList.remove('on');
-        gnb.classList.remove('on');
-        mTopNav.classList.remove('on');
-        this.classList.remove('active');
-        dim.classList.remove('on');
+        navBox.className = 'gnb';
+        navSubBox.className = 'gnb_bg';
+        navSubClose.className = 'gnb_close';
+        gnb.className = 'gnb';
+        mTopNav.className = 'top_nav';
+        this.className = '';
+        dim.className = 'dim';
+        navMcloseBtn.className = 'm_nav_close_btn';
     };
     
     // close 버튼 클릭 시 nav의 서브 메뉴 내려주기
@@ -179,7 +183,7 @@ window.onload = function(){
     
     var gnb = document.querySelector('#header .gnb');
     var mNavBtn = document.querySelector('.m_nav_btn a');
-    var mNavCloseBtn = document.querySelector('#header .gnb_close');
+    var mNavCloseBtn = document.querySelector('.m_nav_close_btn a');
     var mTopNav = document.querySelector('#header .top_nav');
     var dim = document.querySelector('.dim');
     
@@ -190,7 +194,7 @@ window.onload = function(){
         
         gnb.className = 'gnb on';
         mTopNav.className = 'top_nav on';
-        mNavCloseBtn.className = 'gnb_close active';
+        mNavCloseBtn.className = 'active';
         dim.className = 'dim on';
     };
     
