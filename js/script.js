@@ -54,36 +54,32 @@ window.onload = function(){
     // bxslider 플러그인03 (제이쿼리)
     
     var favoriteSlide = $('.favorite_box ul').bxSlider({
-            auto: false,
-            autoControls: false,
-            stopAutoOnClick: false,
-            pager: false,
-            pagerType: 'false',
-            minSlides: 5,
-            maxSlides: 5,
-            slideWidth: 90,
-            });
-    var wWidth = window.innerWidth;
-    
-    if (wWidth > 1200){
-            favoriteSlide.destroySlider();
-        }
-    // window width 값이 1200 이상일 경우 슬라이드 삭제
+                        auto: false,
+                        controls: true,
+                        stopAutoOnClick: false,
+                        minSlides: 5,
+                        maxSlides: 5,
+                        slideWidth: 90,
+    });
     
     window.addEventListener("resize", scrollEvent);
     
+    scrollEvent();
+    
     function scrollEvent() {
         var wWidth = window.innerWidth;
+        //console.log(wWidth);
+        
         if (wWidth > 1200) {
             favoriteSlide.destroySlider();
+            // window width 값이 1200 이상일 경우 슬라이드 삭제
         }else if (wWidth < 1200) {
             //console.log(wWidth);
             favoriteSlide.reloadSlider();
             // bxslider 플러그인04 (제이쿼리)
+            // window width 값이 1200 이하일 경우 슬라이드 생성
         };
     };
-    
-    // window width 값이 1200 이하일 경우 슬라이드 생성
     
     var moreFavorite = document.querySelector('.favorite .favorite_menu a');
     var moreFavoriteBox = document.querySelector('.favorite .favorite_more');
@@ -95,7 +91,7 @@ window.onload = function(){
     function moreFavoritePopup(e){
         e.preventDefault();
         
-        moreFavoriteBox.classList.add('on');
+        moreFavoriteBox.className = 'favorite_more on';
     };
     
     // 자주 찾는 메뉴의 more(+) 박스 클릭 시 창 올리기
@@ -103,7 +99,7 @@ window.onload = function(){
     function moreFavoritePopupClose(e){
         e.preventDefault();
         
-        moreFavoriteBox.classList.remove('on');
+        moreFavoriteBox.className = 'favorite_more';
     };
     
     // 자주 찾는 메뉴의 close(x) 박스 클릭 시 창 내리기
@@ -115,10 +111,11 @@ window.onload = function(){
     
     navSubClose.addEventListener("click",navBoxClose);
     
-    nav.forEach(function(i){
-        i.addEventListener("mouseover",navSlide);
-        i.addEventListener("click", mNavSlide);
-        
+    for(var i = 0; i < nav.length; ++i){
+        nav[i].addEventListener("mouseover",navSlide);
+        nav[i].addEventListener("click", mNavSlide);
+    };
+
         function navSlide(){
             navBox.classList.add('active');
             navSubBox.classList.add('on');
@@ -149,7 +146,6 @@ window.onload = function(){
         };
         
         // 모바일 메뉴를 눌렀을 경우 on 클래스가 있는지 확인하고 없을 경우 on 클래스 추가, 있을 경우 on 클래스 삭제
-    });
     
     function navBoxClose(e){
         e.preventDefault();
@@ -164,20 +160,20 @@ window.onload = function(){
     };
     
     // close 버튼 클릭 시 nav의 서브 메뉴 내려주기
-    
+
     var ftMore = document.querySelectorAll('#footer .ft_top ul li.more');
     var ftMoreClose = document.querySelector('.ft_close_btn a');
     
-    ftMore.forEach(function(i){
-        i.addEventListener('click', moreBox);
-        
-        function moreBox(e){
-            e.preventDefault();
-            
-            i.classList.toggle('on');
-            ftMoreClose.classList.toggle('on');
-        };  
-    });
+        for(var i = 0; i < ftMore.length; ++i){
+            ftMore[i].addEventListener('click', moreBox);
+
+            function moreBox(e){
+                e.preventDefault();
+
+                this.classList.toggle('on');
+                ftMoreClose.classList.toggle('on');
+            };
+        };
     
     // 하단 푸터 셀렉트박스 토글 클래스, 단 li에 search 클래스가 있는 경우는 제외
     
@@ -192,10 +188,10 @@ window.onload = function(){
     function mNavBox(e){
         e.preventDefault();
         
-        gnb.classList.add('on');
-        mTopNav.classList.add('on');
-        mNavCloseBtn.classList.add('active');
-        dim.classList.add('on');
+        gnb.className = 'gnb on';
+        mTopNav.className = 'top_nav on';
+        mNavCloseBtn.className = 'gnb_close active';
+        dim.className = 'dim on';
     };
     
     // 모바일 메뉴 버튼 클릭시 메뉴창 올려주기
@@ -210,7 +206,7 @@ window.onload = function(){
     function mSearch(e){
         e.preventDefault();
         
-        mSearchBox.classList.add('on');
+        mSearchBox.className = 'search on';
     };
     
     // 모바일 검색 버튼 클릭시 검색창 올려주기
@@ -218,7 +214,7 @@ window.onload = function(){
     function mSearchClose(e){
         e.preventDefault();
         
-        mSearchBox.classList.remove('on');
+        mSearchBox.className = 'search';
     };
     
     // 모바일 검색 닫기 버튼 클릭시 검색창 닫아주기
@@ -460,7 +456,7 @@ function favoriteSave(){
         var qna = confirm('저장하시겠습니까?');
         
         if(qna){
-            moreFavoriteBox.classList.remove('on');
+            moreFavoriteBox.className = 'favorite_more';
         
             if(checkFavorite01.checked){
                 liFavorite01.addClass('on');
