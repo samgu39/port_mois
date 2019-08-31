@@ -35,7 +35,7 @@ h3 {font-family: 'Raleway', sans-serif;}
 #skip ul li a:focus {top:0;}
 
 /* portfolio_popup */
-.portfolio_popup {position: fixed; left:20px; top:20px; max-width: 350px; width: 90%; height: 180px; background: rgba(255,255,255,0.8); border: 2px solid #364c86; border-radius: 6px; padding: 20px; box-sizing: border-box; z-index: 99999; overflow: hidden; box-shadow: 2px 2px 4px rgba(0,0,0,0.4);}
+.portfolio_popup {position: fixed; left:20px; top:20px; max-width: 350px; width: 90%; height: 180px; background: rgba(255,255,255,0.8); border: 2px solid #364c86; border-radius: 6px; padding: 20px; box-sizing: border-box; z-index: 100000; overflow: hidden; box-shadow: 2px 2px 4px rgba(0,0,0,0.4);}
 .portfolio_popup .portfolio_popup_top {position: absolute; left:0; top:0; width: 100%; height: 24px; background: #364c86;}
 .portfolio_popup .portfolio_popup_top h2 {display: inline-block; font-size: 0.9em; color: #fff; text-indent: 20px; margin-top:4px; user-select: none;}
 .portfolio_popup .portfolio_popup_bottom p {margin-top:20px; font-family: 'Noto Sans KR', sans-serif; letter-spacing: -1px; line-height: 1.2em;}
@@ -136,7 +136,8 @@ h3 {font-family: 'Raleway', sans-serif;}
 .favorite .favorite_box {width: 100%; height: 135px; position: relative; background: #fff; overflow: hidden;}
 .favorite .favorite_box:hover {height: 270px;}
 .favorite .favorite_box ul {width: 100%; height: 270px; padding: 0 20px; box-sizing: border-box;}
-.favorite .favorite_box ul li {float:left; width:25% ; height: 135px;}
+/**/.favorite .favorite_box ul li {display: none; float:left; width:25% ; height: 135px;}
+.favorite .favorite_box ul li.on {display: block;}
 .favorite .favorite_box ul li a {display: block; position: relative; padding: 10px; font-size: 12px; color: #585b5c; line-height: 16px; white-space: nowrap; text-align: center; margin-top: 78px;}
 .favorite .favorite_box ul li a:before {content: ''; display: block; position: absolute; top:-55px; left:50%; transform: translateX(-50%); width: 60px; height: 60px; background: #f2f3f7 url(../img/ico_favoriteset_201707.png) no-repeat; border-radius: 50%; transition: all .3s;}
 .favorite .favorite_box ul li:hover a:before{background: #d6e2f5 url(../img/ico_favoriteset_201707.png) no-repeat;}
@@ -148,13 +149,27 @@ h3 {font-family: 'Raleway', sans-serif;}
 .favorite .favorite_box ul li.favorite06 a:before {background-position: -350px 0px;}
 .favorite .favorite_box ul li.favorite07 a:before {background-position: -420px 0px;}
 .favorite .favorite_box ul li.favorite08 a:before {background-position: -490px 0px;}
+.favorite .favorite_box ul li.favorite09 a:before {background-position: -560px 0px;}
+.favorite .favorite_box ul li.favorite10 a:before {background-position: -630px 0px;}
+.favorite .favorite_box ul li.favorite11 a:before {background-position: 0px -70px;}
+.favorite .favorite_box ul li.favorite12 a:before {background-position: -70px -70px;}
+.favorite .favorite_box ul li.favorite13 a:before {background-position: -140px -0px;}
+.favorite .favorite_box ul li.favorite14 a:before {background-position: -280px -0px;}
+.favorite .favorite_box ul li.favorite15 a:before {background-position: -350px -0px;}
+.favorite .favorite_box ul li.favorite16 a:before {background-position: -420px -0px;}
+.favorite .favorite_box ul li.favorite17 a:before {background-position: -490px -0px;}
+.favorite .favorite_box ul li.favorite18 a:before {background-position: -560px -0px;}
+.favorite .favorite_box ul li.favorite19 a:before {background-position: -630px -0px;}
+.favorite .favorite_box ul li.favorite20 a:before {background-position: 0px -140px;}
+.favorite .favorite_box ul li.favorite21 a:before {background-position: -70px -140px;}
 /**/.favorite .favorite_more {display: none; position: absolute; left:0; top:0; width: 100%; background: #fff; border: 2px solid #406bb3; box-sizing: border-box; z-index: 99;}
 .favorite .favorite_more.on {display: block;}
 .favorite .favorite_more h4 {display: block; height: 36px; padding-left: 16px; line-height: 36px; font-weight: bold; color: #406bb3; border-bottom: 1px solid #406bb3;}
 .favorite .favorite_more ul {width: 100%; height: 220px; overflow-y: scroll;}
 .favorite .favorite_more ul li {float: left; width: 33.3333%; height: 95px; padding:10px; box-sizing: border-box;}
-.favorite .favorite_more ul li label {display: block; position: relative; left:20px; top:-10px; width: 60px; height: 60px;  background: url(../img/ico_favoriteset_201707.png) no-repeat;}
-.favorite .favorite_more ul li label:before {content: ''; display: block; position: absolute; width: 60px; height: 60px; background: #f2f3f7; border-radius: 50%;  z-index: -1;}
+.favorite .favorite_more ul li label {display: block; position: relative; left:20px; top:-10px; width: 60px; height: 60px;  background: url(../img/ico_favoriteset_201707.png) no-repeat; cursor: pointer;}
+.favorite .favorite_more ul li label:before {content: ''; display: block; position: absolute; width: 60px; height: 60px; background: #f2f3f7; border-radius: 50%;  z-index: -1; transition: all .3s;}
+.favorite .favorite_more ul li label:hover:before {background: #d6e2f5;}
 .favorite .favorite_more ul li .favorite01 {background-position: 0px 0px;}
 .favorite .favorite_more ul li .favorite02 {background-position: -70px 0px;}
 .favorite .favorite_more ul li .favorite03 {background-position: -140px 0px;}
