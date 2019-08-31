@@ -104,6 +104,8 @@ h3 {font-family: 'Raleway', sans-serif;}
 #header .gnb_bg.on {display: block;}
 .m_nav_btn {display: none;}
 .m_nav_btn a {display: block; width: 100%; height: 100%; font-size: 0;}
+.m_nav_close_btn {display: none;}
+.m_nav_close_btn a {display: block; width: 100%; height: 100%; font-size: 0;}
 .m_nav_search_btn {display: none;}
 .m_nav_search_btn a {display: block; width: 100%; height: 100%; font-size: 0;}
 .search_close {display: none;}
@@ -477,8 +479,8 @@ h3 {font-family: 'Raleway', sans-serif;}
     #header .gnb ul li ul li.strong a:hover {background: #d2e6f9;}
     #header .gnb ul li ul li.strong a:before {display: none;}
     #header .gnb_bg.on {display: none;}
-    #header .gnb_close {display: none; position: fixed; left: 255px; top: 0;}
-    #header .gnb_close.active {display: block;}
+    #header .gnb_close {display: none;}
+    #header .gnb_close.on {display: none;}
     #header .gnb ul li .search_btn {display: block; right: 58px; top: 6px; width: 40px; height: 40px; background-position: -256px -6px; z-index: 99;}
     #header .gnb ul li .search_box {display: block; width: calc(100% - 110px); margin-top: 8px; margin-left: 6px; border: none;}
     #header .gnb ul li .search_close {display: block; position: absolute; right: 0; top: 0; border: none; background: #1f2d5c; width: 50px; height: 50px; padding: 0; cursor: pointer;}
@@ -487,6 +489,10 @@ h3 {font-family: 'Raleway', sans-serif;}
     #header .gnb ul li .search_close a:before {position: absolute; left:50%; top:50%; transform: translate(-50%,-50%); width: 20px; height: 20px; background: url(../img/iconset_main2.png) no-repeat; background-position: -125px -100px;}
     .m_nav_btn {display: block; position: absolute; left:10px; top:10px; width: 35px; height: 30px;}
     .m_nav_btn a {width: 60%; height: 60%; font-size: 0; background: url(../img/iconset_main2.png) no-repeat; background-position: -93px -93px; padding: 7px;}
+    .m_nav_close_btn {display: block;}
+    .m_nav_close_btn a {display: none; position: fixed; left: 255px; top: 0; width: 40px; height: 40px; background: #4573ae; z-index: 99999;}
+    .m_nav_close_btn a:before {content: ''; display: block; position: absolute; left:50%; top:50%; transform: translate(-50%,-50%); width: 70%; height: 70%; background: url(../img/iconset_main2.png) no-repeat; background-position: -121px -96px;}
+    .m_nav_close_btn a.active {display: block;}
     .m_nav_search_btn {display: block; position: absolute; right: 15px; top: 15px; width: 22px; height: 22px;}
     .m_nav_search_btn a {background: url(../img/iconset_main2.png) no-repeat; background-position: -263px -63px;}
     .dim {display: none; width: 100%; height: 100%; position: fixed; top:0; left:0; background: rgba(6,23,37,0.8); z-index: 99998;}
