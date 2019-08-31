@@ -223,4 +223,385 @@ window.onload = function(){
     
     // 모바일 검색 닫기 버튼 클릭시 검색창 닫아주기
     
+    mianFavoriteSave();
+    
+    function mianFavoriteSave(){
+        var moreFavoriteBox = document.querySelector('.favorite .favorite_more');
+        var liFavorite01 = $('.favorite .favorite_box ul li.favorite01'),
+            liFavorite02 = $('.favorite .favorite_box ul li.favorite02'),
+            liFavorite03 = $('.favorite .favorite_box ul li.favorite03'),
+            liFavorite04 = $('.favorite .favorite_box ul li.favorite04'),
+            liFavorite05 = $('.favorite .favorite_box ul li.favorite05'),
+            liFavorite06 = $('.favorite .favorite_box ul li.favorite06'),
+            liFavorite07 = $('.favorite .favorite_box ul li.favorite07'),
+            liFavorite08 = $('.favorite .favorite_box ul li.favorite08'),
+            liFavorite09 = $('.favorite .favorite_box ul li.favorite09'),
+            liFavorite10 = $('.favorite .favorite_box ul li.favorite10'),
+            liFavorite11 = $('.favorite .favorite_box ul li.favorite11'),
+            liFavorite12 = $('.favorite .favorite_box ul li.favorite12'),
+            liFavorite13 = $('.favorite .favorite_box ul li.favorite13'),
+            liFavorite14 = $('.favorite .favorite_box ul li.favorite14'),
+            liFavorite15 = $('.favorite .favorite_box ul li.favorite15'),
+            liFavorite16 = $('.favorite .favorite_box ul li.favorite16'),
+            liFavorite17 = $('.favorite .favorite_box ul li.favorite17'),
+            liFavorite18 = $('.favorite .favorite_box ul li.favorite18'),
+            liFavorite19 = $('.favorite .favorite_box ul li.favorite19'),
+            liFavorite20 = $('.favorite .favorite_box ul li.favorite20'),
+            liFavorite21 = $('.favorite .favorite_box ul li.favorite21'),
+            checkFavorite01 = document.querySelector('.favorite .favorite_more ul li #favorite01'),
+            checkFavorite02 = document.querySelector('.favorite .favorite_more ul li #favorite02'),
+            checkFavorite03 = document.querySelector('.favorite .favorite_more ul li #favorite03'),
+            checkFavorite04 = document.querySelector('.favorite .favorite_more ul li #favorite04'),
+            checkFavorite05 = document.querySelector('.favorite .favorite_more ul li #favorite05'),
+            checkFavorite06 = document.querySelector('.favorite .favorite_more ul li #favorite06'),
+            checkFavorite07 = document.querySelector('.favorite .favorite_more ul li #favorite07'),
+            checkFavorite08 = document.querySelector('.favorite .favorite_more ul li #favorite08'),
+            checkFavorite09 = document.querySelector('.favorite .favorite_more ul li #favorite09'),
+            checkFavorite10 = document.querySelector('.favorite .favorite_more ul li #favorite10'),
+            checkFavorite11 = document.querySelector('.favorite .favorite_more ul li #favorite11'),
+            checkFavorite12 = document.querySelector('.favorite .favorite_more ul li #favorite12'),
+            checkFavorite13 = document.querySelector('.favorite .favorite_more ul li #favorite13'),
+            checkFavorite14 = document.querySelector('.favorite .favorite_more ul li #favorite14'),
+            checkFavorite15 = document.querySelector('.favorite .favorite_more ul li #favorite15'),
+            checkFavorite16 = document.querySelector('.favorite .favorite_more ul li #favorite16'),
+            checkFavorite17 = document.querySelector('.favorite .favorite_more ul li #favorite17'),
+            checkFavorite18 = document.querySelector('.favorite .favorite_more ul li #favorite18'),
+            checkFavorite19 = document.querySelector('.favorite .favorite_more ul li #favorite19'),
+            checkFavorite20 = document.querySelector('.favorite .favorite_more ul li #favorite20'),
+            checkFavorite21 = document.querySelector('.favorite .favorite_more ul li #favorite21');
+    
+        if(checkFavorite01.checked){
+            liFavorite01.addClass('on');
+        }else{
+            liFavorite01.removeClass('on');
+        };
+        
+        if(checkFavorite02.checked){
+            liFavorite02.addClass('on');
+        }else{
+            liFavorite02.removeClass('on');
+        };
+
+         if(checkFavorite03.checked){
+             liFavorite03.addClass('on');
+         }else{
+             liFavorite03.removeClass('on');
+         };
+
+         if(checkFavorite04.checked){
+             liFavorite04.addClass('on');
+         }else{
+             liFavorite04.removeClass('on');
+         };
+
+         if(checkFavorite05.checked){
+             liFavorite05.addClass('on');
+         }else{
+             liFavorite05.removeClass('on');
+         };
+
+         if(checkFavorite06.checked){
+             liFavorite06.addClass('on');
+         }else{
+             liFavorite06.removeClass('on');
+         };
+
+         if(checkFavorite07.checked){
+             liFavorite07.addClass('on');
+         }else{
+             liFavorite07.removeClass('on');
+         };
+
+         if(checkFavorite08.checked){
+             liFavorite08.addClass('on');
+         }else{
+             liFavorite08.removeClass('on');
+         };
+
+         if(checkFavorite09.checked){
+             liFavorite09.addClass('on');
+         }else{
+             liFavorite09.removeClass('on');
+         };
+
+         if(checkFavorite10.checked){
+             liFavorite10.addClass('on');
+         }else{
+             liFavorite10.removeClass('on');
+         };
+
+         if(checkFavorite11.checked){
+             liFavorite11.addClass('on');
+         }else{
+             liFavorite11.removeClass('on');
+         };
+
+         if(checkFavorite12.checked){
+             liFavorite12.addClass('on');
+         }else{
+             liFavorite12.removeClass('on');
+         };
+
+         if(checkFavorite13.checked){
+             liFavorite13.addClass('on');
+         }else{
+             liFavorite13.removeClass('on');
+         };
+
+         if(checkFavorite14.checked){
+             liFavorite14.addClass('on');
+         }else{
+             liFavorite14.removeClass('on');
+         };
+
+         if(checkFavorite15.checked){
+             liFavorite15.addClass('on');
+         }else{
+            liFavorite15.removeClass('on');
+         };
+
+        if(checkFavorite16.checked){
+            liFavorite16.addClass('on');
+        }else{
+            liFavorite16.removeClass('on');
+        };
+
+        if(checkFavorite17.checked){
+            liFavorite17.addClass('on');
+        }else{
+            liFavorite17.removeClass('on');
+        };
+
+        if(checkFavorite18.checked){
+            liFavorite18.addClass('on');
+        }else{
+            liFavorite18.removeClass('on');
+        };
+
+        if(checkFavorite19.checked){
+            liFavorite19.addClass('on');
+        }else{
+            liFavorite19.removeClass('on');
+        };
+
+        if(checkFavorite20.checked){
+            liFavorite20.addClass('on');
+        }else{
+            liFavorite20.removeClass('on');
+        };
+
+        if(checkFavorite21.checked){
+            liFavorite21.addClass('on');
+        }else{
+            liFavorite21.removeClass('on');
+        };
+    };
+    
+    // 페이지가 로드되었을 때 자주 찾는 정보 중 체크되어있는 값만을 띄워주기
+    
 };
+
+function favoriteSave(){
+    var checkBox = $('.favorite .favorite_more ul li input:checkbox[type="checkbox"]:checked');
+    var moreFavoriteBox = document.querySelector('.favorite .favorite_more');
+    var liFavorite01 = $('.favorite .favorite_box ul li.favorite01'),
+        liFavorite02 = $('.favorite .favorite_box ul li.favorite02'),
+        liFavorite03 = $('.favorite .favorite_box ul li.favorite03'),
+        liFavorite04 = $('.favorite .favorite_box ul li.favorite04'),
+        liFavorite05 = $('.favorite .favorite_box ul li.favorite05'),
+        liFavorite06 = $('.favorite .favorite_box ul li.favorite06'),
+        liFavorite07 = $('.favorite .favorite_box ul li.favorite07'),
+        liFavorite08 = $('.favorite .favorite_box ul li.favorite08'),
+        liFavorite09 = $('.favorite .favorite_box ul li.favorite09'),
+        liFavorite10 = $('.favorite .favorite_box ul li.favorite10'),
+        liFavorite11 = $('.favorite .favorite_box ul li.favorite11'),
+        liFavorite12 = $('.favorite .favorite_box ul li.favorite12'),
+        liFavorite13 = $('.favorite .favorite_box ul li.favorite13'),
+        liFavorite14 = $('.favorite .favorite_box ul li.favorite14'),
+        liFavorite15 = $('.favorite .favorite_box ul li.favorite15'),
+        liFavorite16 = $('.favorite .favorite_box ul li.favorite16'),
+        liFavorite17 = $('.favorite .favorite_box ul li.favorite17'),
+        liFavorite18 = $('.favorite .favorite_box ul li.favorite18'),
+        liFavorite19 = $('.favorite .favorite_box ul li.favorite19'),
+        liFavorite20 = $('.favorite .favorite_box ul li.favorite20'),
+        liFavorite21 = $('.favorite .favorite_box ul li.favorite21'),
+        checkFavorite01 = document.querySelector('.favorite .favorite_more ul li #favorite01'),
+        checkFavorite02 = document.querySelector('.favorite .favorite_more ul li #favorite02'),
+        checkFavorite03 = document.querySelector('.favorite .favorite_more ul li #favorite03'),
+        checkFavorite04 = document.querySelector('.favorite .favorite_more ul li #favorite04'),
+        checkFavorite05 = document.querySelector('.favorite .favorite_more ul li #favorite05'),
+        checkFavorite06 = document.querySelector('.favorite .favorite_more ul li #favorite06'),
+        checkFavorite07 = document.querySelector('.favorite .favorite_more ul li #favorite07'),
+        checkFavorite08 = document.querySelector('.favorite .favorite_more ul li #favorite08'),
+        checkFavorite09 = document.querySelector('.favorite .favorite_more ul li #favorite09'),
+        checkFavorite10 = document.querySelector('.favorite .favorite_more ul li #favorite10'),
+        checkFavorite11 = document.querySelector('.favorite .favorite_more ul li #favorite11'),
+        checkFavorite12 = document.querySelector('.favorite .favorite_more ul li #favorite12'),
+        checkFavorite13 = document.querySelector('.favorite .favorite_more ul li #favorite13'),
+        checkFavorite14 = document.querySelector('.favorite .favorite_more ul li #favorite14'),
+        checkFavorite15 = document.querySelector('.favorite .favorite_more ul li #favorite15'),
+        checkFavorite16 = document.querySelector('.favorite .favorite_more ul li #favorite16'),
+        checkFavorite17 = document.querySelector('.favorite .favorite_more ul li #favorite17'),
+        checkFavorite18 = document.querySelector('.favorite .favorite_more ul li #favorite18'),
+        checkFavorite19 = document.querySelector('.favorite .favorite_more ul li #favorite19'),
+        checkFavorite20 = document.querySelector('.favorite .favorite_more ul li #favorite20'),
+        checkFavorite21 = document.querySelector('.favorite .favorite_more ul li #favorite21');
+    
+    if(checkBox.checked){
+        checkto = true;
+    }else{
+        checkto = false;
+    };
+    
+//    console.log(checkBox.length);
+    
+    if(checkBox.length == 8){
+        
+        var qna = confirm('저장하시겠습니까?');
+        
+        if(qna){
+            moreFavoriteBox.classList.remove('on');
+        
+            if(checkFavorite01.checked){
+                liFavorite01.addClass('on');
+            }else{
+                liFavorite01.removeClass('on');
+            };
+
+            if(checkFavorite02.checked){
+                liFavorite02.addClass('on');
+            }else{
+                liFavorite02.removeClass('on');
+            };
+
+            if(checkFavorite03.checked){
+                liFavorite03.addClass('on');
+            }else{
+                liFavorite03.removeClass('on');
+            };
+
+            if(checkFavorite04.checked){
+                liFavorite04.addClass('on');
+            }else{
+                liFavorite04.removeClass('on');
+            };
+
+            if(checkFavorite05.checked){
+                liFavorite05.addClass('on');
+            }else{
+                liFavorite05.removeClass('on');
+            };
+
+            if(checkFavorite06.checked){
+                liFavorite06.addClass('on');
+            }else{
+                liFavorite06.removeClass('on');
+            };
+
+            if(checkFavorite07.checked){
+                liFavorite07.addClass('on');
+            }else{
+                liFavorite07.removeClass('on');
+            };
+
+            if(checkFavorite08.checked){
+                liFavorite08.addClass('on');
+            }else{
+                liFavorite08.removeClass('on');
+            };
+
+            if(checkFavorite09.checked){
+                liFavorite09.addClass('on');
+            }else{
+                liFavorite09.removeClass('on');
+            };
+
+            if(checkFavorite10.checked){
+                liFavorite10.addClass('on');
+            }else{
+                liFavorite10.removeClass('on');
+            };
+
+            if(checkFavorite11.checked){
+                liFavorite11.addClass('on');
+            }else{
+                liFavorite11.removeClass('on');
+            };
+
+            if(checkFavorite12.checked){
+                liFavorite12.addClass('on');
+            }else{
+                liFavorite12.removeClass('on');
+            };
+
+            if(checkFavorite13.checked){
+                liFavorite13.addClass('on');
+            }else{
+                liFavorite13.removeClass('on');
+            };
+
+            if(checkFavorite14.checked){
+                liFavorite14.addClass('on');
+            }else{
+                liFavorite14.removeClass('on');
+            };
+
+            if(checkFavorite15.checked){
+                liFavorite15.addClass('on');
+            }else{
+                liFavorite15.removeClass('on');
+            };
+
+            if(checkFavorite16.checked){
+                liFavorite16.addClass('on');
+            }else{
+                liFavorite16.removeClass('on');
+            };
+
+            if(checkFavorite17.checked){
+                liFavorite17.addClass('on');
+            }else{
+                liFavorite17.removeClass('on');
+            };
+
+            if(checkFavorite18.checked){
+                liFavorite18.addClass('on');
+            }else{
+                liFavorite18.removeClass('on');
+            };
+
+            if(checkFavorite19.checked){
+                liFavorite19.addClass('on');
+            }else{
+                liFavorite19.removeClass('on');
+            };
+
+            if(checkFavorite20.checked){
+                liFavorite20.addClass('on');
+            }else{
+                liFavorite20.removeClass('on');
+            };
+
+            if(checkFavorite21.checked){
+                liFavorite21.addClass('on');
+            }else{
+                liFavorite21.removeClass('on');
+            };
+        }else{
+            return false;
+        };
+        
+       }else{
+        alert('8개 메뉴를 선택하셔야 저장이 가능합니다.');
+       };
+};
+
+    // 자주 찾는 정보 중 체크되어있는 값만을 띄워주기
+
+function favoriteReset(){
+    var checkBox = $('.favorite .favorite_more ul li input:checkbox[type="checkbox"]:checked');
+    
+    checkBox.removeAttr("checked");
+};
+
+    // 초기화 버튼 클릭 시 체크된 값 리셋
