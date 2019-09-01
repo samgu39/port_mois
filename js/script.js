@@ -106,6 +106,7 @@ window.onload = function(){
     
     var nav = document.querySelectorAll('#header .gnb ul li');
     var navBox = document.querySelector('#header .gnb');
+    var navBoxUl = document.querySelector('#header .gnb ul');
     var navSubBox = document.querySelector('#header .gnb_bg');
     var navSubClose = document.querySelector('#header .gnb_close');
     var navMcloseBtn = document.querySelector('.m_nav_close_btn a');
@@ -130,13 +131,16 @@ window.onload = function(){
         navBox.addEventListener("mouseleave",navClose);
         
         function navClose(){
-            navBox.className = 'gnb on';
+            navBox.className = 'gnb';
             navSubBox.className = 'gnb_bg';
             navSubClose.className = 'gnb_close';
+            navMcloseBtn.className = '';
+            mTopNav.className = 'top_nav'
+            dim.className = 'dim';
         };
         
         // nav li 에 마우스가 벗어났을 경우 서브 메뉴 내려주기
-        
+    
         function mNavSlide(e){
             e.preventDefault();
             
@@ -165,21 +169,30 @@ window.onload = function(){
     
     // close 버튼 클릭 시 nav의 서브 메뉴 내려주기
 
-    var ftMore = document.querySelectorAll('#footer .ft_top ul li.more');
-    var ftMoreClose = document.querySelector('.ft_close_btn a');
-    
-        for(var i = 0; i < ftMore.length; ++i){
-            ftMore[i].addEventListener('click', moreBox);
+//    var ftMore = document.querySelectorAll('#footer .ft_top ul li.more');
+//    var ftMoreClose = document.querySelector('.ft_close_btn a');
+//    
+//        for(var i = 0; i < ftMore.length; ++i){
+//            ftMore[i].addEventListener('click', moreBox);
+//
+//            function moreBox(e){
+//                e.preventDefault();
+//
+//                this.className = 'more on';
+//            };
+//        };
 
-            function moreBox(e){
-                e.preventDefault();
-
-                this.classList.toggle('on');
-                ftMoreClose.classList.toggle('on');
-            };
-        };
     
-    // 하단 푸터 셀렉트박스 토글 클래스, 단 li에 search 클래스가 있는 경우는 제외
+    var ftMore = $('#footer .ft_top ul li.more');
+    var ftMoreClose = $('.ft_close_btn a');
+
+    ftMore.click(function(e){
+        e.preventDefault();
+        
+        $(this).toggleClass('on');
+    });
+    
+    // 하단 푸터 셀렉트박스 토글 클래스
     
     var gnb = document.querySelector('#header .gnb');
     var mNavBtn = document.querySelector('.m_nav_btn a');
@@ -201,8 +214,8 @@ window.onload = function(){
     // 모바일 메뉴 버튼 클릭시 메뉴창 올려주기
     
     var mSearchBtn = document.querySelector('.m_nav_search_btn a');
-    var mSearchBox = document.querySelector('#header .gnb ul li.search');
-    var mSearchCloseBtn = document.querySelector('#header .gnb ul li .search_close a');
+    var mSearchBox = document.querySelector('#header .gnb .search');
+    var mSearchCloseBtn = document.querySelector('#header .gnb .search_close a');
     
     mSearchBtn.addEventListener("click", mSearch);
     mSearchCloseBtn.addEventListener("click", mSearchClose);

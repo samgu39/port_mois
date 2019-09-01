@@ -95,8 +95,9 @@ h3 {font-family: 'Raleway', sans-serif;}
 #header .gnb ul li ul:hover {background: #eef7fe;}
 #header .gnb ul li:hover ul li a {background: none;}
 #header .gnb ul li ul li a:hover {background: #d2e6f9;}
-#header .gnb ul li .search_btn {position: absolute; right: 0; top:50%; transform: translateY(-50%); font-size: 0; width: 20px; height: 20px; background: url(../img/iconset_main2.png) no-repeat; background-position: -24px -75px; cursor: pointer;}
-#header .gnb ul li .search_box {border: 0; width: 100%; height: 34px; margin: 5px 8px 5px 8px ;}
+#header .gnb .search {position: absolute; right: 8px; top: 0; width: 170px; z-index: 1;}
+#header .gnb .search_btn {position: absolute; right: 0; top:50%; transform: translateY(-50%); font-size: 0; width: 20px; height: 20px; background: url(../img/iconset_main2.png) no-repeat; background-position: -24px -75px; cursor: pointer;}
+#header .gnb .search_box {border: 0; width: 100%; height: 34px; margin: 5px 8px 5px 8px ;}
 /**/#header .gnb_close {display: none; position: absolute; bottom:-359px; right:178px; width: 40px; height: 40px; background: #4573ae; z-index: 99999;}
 #header .gnb_close.on {display: block;}
 #header .gnb_close a {display: block; width: 70%; height: 70%; margin: 15%; font-size: 0; background: url(../img/iconset_main2.png) no-repeat; background-position: -121px -96px;}
@@ -356,9 +357,9 @@ h3 {font-family: 'Raleway', sans-serif;}
     #header .top_nav ul li a {line-height: 12px;}
     #header .top_sns {display: none;}
     #header .gnb ul li {width: 16.66%;}
-    #header .gnb ul li:last-child {position: absolute; top:-45px; right: 0; width: 200px;}
-    #header .gnb ul li .search_btn {transform: none; top: 6px; right: 14px;}
-    #header .gnb ul li .search_box {margin:0; border:1px solid #ccc; box-sizing: border-box;}
+    #header .gnb .search {top: -42px;}
+    #header .gnb .search_btn {transform: none; top: 6px; right: 14px;}
+    #header .gnb .search_box {margin:0; border:1px solid #ccc; box-sizing: border-box;}
     #header .gnb ul li a {padding: 0; text-align: center;}
     #header .gnb ul li ul li:last-child {position: inherit; width: 100%; top: auto;}
     #header .gnb_close {right: 1px;}
@@ -481,12 +482,14 @@ h3 {font-family: 'Raleway', sans-serif;}
     #header .gnb_bg.on {display: none;}
     #header .gnb_close {display: none;}
     #header .gnb_close.on {display: none;}
-    #header .gnb ul li .search_btn {display: block; right: 58px; top: 6px; width: 40px; height: 40px; background-position: -256px -6px; z-index: 99;}
-    #header .gnb ul li .search_box {display: block; width: calc(100% - 110px); margin-top: 8px; margin-left: 6px; border: none;}
-    #header .gnb ul li .search_close {display: block; position: absolute; right: 0; top: 0; border: none; background: #1f2d5c; width: 50px; height: 50px; padding: 0; cursor: pointer;}
-    #header .gnb ul li .search_close.on {display: block;}
-    #header .gnb ul li .search_close a {display: block !important; position: relative; width: 20px; height: 20px; font-size: 0 !important; padding: 15px;}
-    #header .gnb ul li .search_close a:before {position: absolute; left:50%; top:50%; transform: translate(-50%,-50%); width: 20px; height: 20px; background: url(../img/iconset_main2.png) no-repeat; background-position: -125px -100px;}
+    /**/#header .gnb .search {display: none; position: fixed; top: 0; left: 0; width: 100%; height: 50px; background: #364c86;}
+    #header .gnb .search_btn {display: block; right: 58px; top: 6px; width: 40px; height: 40px; background-position: -256px -6px; z-index: 99;}
+    #header .gnb .search.on {display: block;}
+    #header .gnb .search_box {display: block; width: calc(100% - 115px); margin-top: 8px; margin-left: 10px; border: none;}
+    #header .gnb .search_close {display: block; position: absolute; right: 0; top: 0; border: none; background: #1f2d5c; width: 50px; height: 50px; padding: 0; cursor: pointer;}
+    #header .gnb .search_close.on {display: block;}
+    #header .gnb .search_close a {display: block; position: relative; width: 20px; height: 20px; font-size: 0 !important; padding: 15px;}
+    #header .gnb .search_close a:before {content: ''; display: block; position: absolute; left:50%; top:50%; transform: translate(-50%,-50%); width: 20px; height: 20px; background: url(../img/iconset_main2.png) no-repeat; background-position: -125px -100px;}
     .m_nav_btn {display: block; position: absolute; left:10px; top:10px; width: 35px; height: 30px;}
     .m_nav_btn a {width: 60%; height: 60%; font-size: 0; background: url(../img/iconset_main2.png) no-repeat; background-position: -93px -93px; padding: 7px;}
     .m_nav_close_btn {display: block;}
@@ -565,6 +568,8 @@ h3 {font-family: 'Raleway', sans-serif;}
     #footer .ft_top ul li.more:last-child {margin-right:10px; width: calc(50% - 10px);}
     #footer .ft_top ul li a {text-align: center;}
     #footer .ft_top ul li.more a {text-align: left;}
+    #footer .ft_top ul li.more ul li {width: 100%; margin: 0; height: 30px;}
+    #footer .ft_top ul li.more ul li a {font-size: 11px;}
     #footer .ft_bottom {padding-left: 10px;}
     #footer .ft_bottom p {width: 75%;}
     #footer .ft_bottom .mark {width: 50px; right: 10px;}
@@ -575,6 +580,7 @@ h3 {font-family: 'Raleway', sans-serif;}
     .favorite .favorite_box .bx-wrapper .bx-next {margin-top: -19px; right: -93.5%; }
     .sns {height: 95px;}
     .box_move {margin-top: -21px;}
+    .banner01 a {background-position: top;}
     .banner01 a img {margin: 10px 0 0 10px;}
     .banner02 a .pc_text {right: 10%;}
     .banner_list {padding: 0 10px;}
