@@ -458,7 +458,7 @@ h3 {font-family: 'Raleway', sans-serif;}
     #header .gnb ul {width: 255px; height: 100vh;}
     #header .gnb ul li {width: 100%; height: auto; float:none;}
     #header .gnb ul li:before {display: none;}
-    #header .gnb ul li.on > a {background: #364c86;}
+    #header .gnb ul li.on > a {background: #364c86; color: #fff;}
     #header .gnb ul li.on:hover {background: #364c86;}
     #header .gnb ul li a {position: relative; color: #000; text-align: left; padding-left: 16px;}
     #header .gnb ul li a:hover {color: #fff;}

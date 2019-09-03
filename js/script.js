@@ -144,7 +144,10 @@ window.onload = function(){
         function mNavSlide(e){
             e.preventDefault();
             
-            this.classList.toggle('on');
+            for(var i = 0; i < nav.length; ++i){
+                nav[i].className = '';
+                this.className = 'on';
+            };
         };
         
         // 모바일 메뉴를 눌렀을 경우 on 클래스가 있는지 확인하고 없을 경우 on 클래스 추가, 있을 경우 on 클래스 삭제
