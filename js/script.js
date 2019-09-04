@@ -60,11 +60,10 @@ window.onload = function(){
                         minSlides: 5,
                         maxSlides: 5,
                         slideWidth: 90,
+                        moveSlides: 0
     });
     
     window.addEventListener("resize", scrollEvent);
-    
-    scrollEvent();
     
     function scrollEvent() {
         var wWidth = window.innerWidth;
@@ -80,6 +79,18 @@ window.onload = function(){
             // window width 값이 1200 이하일 경우 슬라이드 생성
         };
     };
+    
+    if (wWidth > 1200) {
+            favoriteSlide.destroySlider();
+            // window width 값이 1200 이상일 경우 슬라이드 삭제
+        }else if (wWidth < 1200) {
+            //console.log(wWidth);
+            favoriteSlide.reloadSlider();
+            // bxslider 플러그인04 (제이쿼리)
+            // window width 값이 1200 이하일 경우 슬라이드 생성
+        };
+    
+    // resize를 하지 않아도 window의 width값이 1200 이하일 경우 슬라이드 생성
     
     var moreFavorite = document.querySelector('.favorite .favorite_menu a');
     var moreFavoriteBox = document.querySelector('.favorite .favorite_more');
@@ -163,20 +174,6 @@ window.onload = function(){
     };
     
     // close 버튼 클릭 시 nav의 서브 메뉴 내려주기
-
-//    var ftMore = document.querySelectorAll('#footer .ft_top ul li.more');
-//    var ftMoreClose = document.querySelector('.ft_close_btn a');
-//    
-//        for(var i = 0; i < ftMore.length; ++i){
-//            ftMore[i].addEventListener('click', moreBox);
-//
-//            function moreBox(e){
-//                e.preventDefault();
-//
-//                this.className = 'more on';
-//            };
-//        };
-
     
     var ftMore = $('#footer .ft_top ul li.more');
     var ftMoreClose = $('.ft_close_btn a');
