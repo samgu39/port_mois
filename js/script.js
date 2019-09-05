@@ -80,12 +80,17 @@ window.onload = function(){
         };
     };
     
-    if (wWidth > 1200) {
+    // resize가 되었을 때 window의 width값이 1200 이하일 경우 슬라이드 생성
+    
+    var windowWidth = window.innerWidth;
+    
+    //console.log(windowWidth);
+    if (windowWidth > 1200) {
             favoriteSlide.destroySlider();
             // window width 값이 1200 이상일 경우 슬라이드 삭제
         }else if (wWidth < 1200) {
             //console.log(wWidth);
-            favoriteSlide.reloadSlider();
+            windowWidth.reloadSlider();
             // bxslider 플러그인04 (제이쿼리)
             // window width 값이 1200 이하일 경우 슬라이드 생성
         };
@@ -174,6 +179,20 @@ window.onload = function(){
     };
     
     // close 버튼 클릭 시 nav의 서브 메뉴 내려주기
+
+//    var ftMore = document.querySelectorAll('#footer .ft_top ul li.more');
+//    var ftMoreClose = document.querySelector('.ft_close_btn a');
+//    
+//        for(var i = 0; i < ftMore.length; ++i){
+//            ftMore[i].addEventListener('click', moreBox);
+//
+//            function moreBox(e){
+//                e.preventDefault();
+//
+//                this.className = 'more on';
+//            };
+//        };
+
     
     var ftMore = $('#footer .ft_top ul li.more');
     var ftMoreClose = $('.ft_close_btn a');
