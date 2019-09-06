@@ -62,11 +62,12 @@ window.onload = function(){
                         slideWidth: 90,
                         moveSlides: 0
     });
-    
+
     window.addEventListener("resize", scrollEvent);
-    
+	
     function scrollEvent() {
         var wWidth = window.innerWidth;
+		
         //console.log(wWidth);
         
         if (wWidth > 1200) {
@@ -80,23 +81,20 @@ window.onload = function(){
         };
     };
     
-    // resize가 되었을 때 window의 width값이 1200 이하일 경우 슬라이드 생성
-    
-    var windowWidth = window.innerWidth;
-    
-    //console.log(windowWidth);
-    if (windowWidth > 1200) {
+    // resize된 window의 width값이 1200 이하일 경우 슬라이드 생성
+	
+	var winScale = window.innerWidth;
+	
+	if (winScale > 1200) {
             favoriteSlide.destroySlider();
             // window width 값이 1200 이상일 경우 슬라이드 삭제
-        }else if (wWidth < 1200) {
+        }else if (winScale < 1200) {
             //console.log(wWidth);
-            windowWidth.reloadSlider();
+            favoriteSlide.reloadSlider();
             // bxslider 플러그인04 (제이쿼리)
             // window width 값이 1200 이하일 경우 슬라이드 생성
         };
-    
-    // resize를 하지 않아도 window의 width값이 1200 이하일 경우 슬라이드 생성
-    
+	
     var moreFavorite = document.querySelector('.favorite .favorite_menu a');
     var moreFavoriteBox = document.querySelector('.favorite .favorite_more');
     var moreFavoriteClose = document.querySelector('.favorite .favorite_more .close a');
@@ -120,7 +118,7 @@ window.onload = function(){
     
     // 자주 찾는 메뉴의 close(x) 박스 클릭 시 창 내리기
     
-    var nav = document.querySelectorAll('#header .gnb ul li');
+    var nav = document.querySelectorAll('#header .gnb .menubox > li');
     var navBox = document.querySelector('#header .gnb');
     var navBoxUl = document.querySelector('#header .gnb ul');
     var navSubBox = document.querySelector('#header .gnb_bg');
@@ -159,8 +157,11 @@ window.onload = function(){
     
         function mNavSlide(e){
             e.preventDefault();
-            
-            this.classList.toggle('on');
+			
+            for(var j = 0 ; j < nav.length ; ++j){
+				nav[j].className = '';
+			}; // 임의로 nav의 [j]값을 지정하여 해당 nav 에 className 제거
+            this.className = 'on';
         };
         
         // 모바일 메뉴를 눌렀을 경우 on 클래스가 있는지 확인하고 없을 경우 on 클래스 추가, 있을 경우 on 클래스 삭제
@@ -179,20 +180,6 @@ window.onload = function(){
     };
     
     // close 버튼 클릭 시 nav의 서브 메뉴 내려주기
-
-//    var ftMore = document.querySelectorAll('#footer .ft_top ul li.more');
-//    var ftMoreClose = document.querySelector('.ft_close_btn a');
-//    
-//        for(var i = 0; i < ftMore.length; ++i){
-//            ftMore[i].addEventListener('click', moreBox);
-//
-//            function moreBox(e){
-//                e.preventDefault();
-//
-//                this.className = 'more on';
-//            };
-//        };
-
     
     var ftMore = $('#footer .ft_top ul li.more');
     var ftMoreClose = $('.ft_close_btn a');
