@@ -373,12 +373,12 @@ h3 {font-family: 'Raleway', sans-serif;}
     .favorite .favorite_box {height: 125px;}
     .favorite .favorite_box:hover {height: 125px;}
     .favorite .favorite_box ul {min-width: 478px; width: 1200px; height: 125px;}
-    .favorite .favorite_box ul li {width: 80px; height: 125px;}
+    .favorite .favorite_box ul li {display: block; width: 80px; height: 125px;}
     .favorite .favorite_box .bx-wrapper {border: none; box-shadow: none; margin: 0; max-width: 100% !important;}
-    .favorite .favorite_box .bx-wrapper .bx-controls-direction {width: 100%; height: 125px; position: relative; top: -125px;}
-    .favorite .favorite_box .bx-wrapper .bx-prev {position: relative; display: block; width: 28px; height: 38px; background: rgba(0,0,0,0.6); left: 0; font-size: 0;}
+    .favorite .favorite_box .bx-wrapper .bx-controls-direction {width: 100%; height: 125px; position: relative; top: 15px;}
+    .favorite .favorite_box .bx-wrapper .bx-prev {position: relative; display: inline-block; width: 28px; height: 38px; background: rgba(0,0,0,0.6); top: -110px; left: 0; font-size: 0;}
     .favorite .favorite_box .bx-wrapper .bx-prev:before {content: ''; display: block; position: absolute; left: 50%; top:50%; transform: translate(-50%,-50%); width: 12px; height: 12px; margin: 0; background: url(../img/iconset_main2.png) no-repeat; background-position: 2px -25px;}
-    .favorite .favorite_box .bx-wrapper .bx-next {position: relative; display: block; width: 28px; height: 38px; background: rgba(0,0,0,0.6); right: -450px; top: 50%; transform: translateY(-50%); font-size: 0;}
+    .favorite .favorite_box .bx-wrapper .bx-next {position: absolute; display: inline-block; width: 28px; height: 38px; background: rgba(0,0,0,0.6); top: -80px; right: 0; font-size: 0;}
     .favorite .favorite_box .bx-wrapper .bx-next:before {content: ''; display: block; position: absolute; left: 50%; top:50%; transform: translate(-50%,-50%); width: 12px; height: 12px; margin: 0 !important; background: url(../img/iconset_main2.png) no-repeat; background-position: -22px -25px;}
     .favorite .favorite_menu {display: none;}
     .notice_menu {width: 478px;}
@@ -507,7 +507,6 @@ h3 {font-family: 'Raleway', sans-serif;}
     .slide_box .bx-wrapper .bx-controls-direction .bx-next {right: 0; top:50%; transform: translateY(-50%); width: 28px; height: 57px; background: rgba(0,0,0,0.6);}
     .favorite {width: 100%;}
     .favorite .favorite_box ul {padding: 0 20px;}
-    .favorite .favorite_box .bx-wrapper .bx-next {right: -95.5%;}
     .notice_menu {width: 100%; position: relative; top: 130px;}
     .banner01 {width: 100%; float: left; top: -148px;}
     .banner01 a {background-size: cover; background-position: 0 -20px;}
