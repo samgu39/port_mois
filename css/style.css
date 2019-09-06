@@ -331,7 +331,7 @@ h3 {font-family: 'Raleway', sans-serif;}
 #footer .ft_top ul li ul li:nth-child(8) a, #footer .ft_top ul li ul li a {line-height: 27px; padding:0;}
 #footer .ft_top ul li ul li:nth-child(8), #footer .ft_top ul li ul li:nth-child(9), #footer .ft_top ul li ul li:nth-child(10) {border: none;}
 #footer .ft_top ul li.more ul li a:before {display: none;}
-#footer .ft_top ul li.more .ft_close_btn a {position: relative; display: none; width: 35px; height: 37px; position: absolute; right: 0; top: 0; background: #eee; font-size: 0;}
+#footer .ft_top ul li.more .ft_close_btn a {position: relative; display: none; width: 35px; height: 35px; position: absolute; right: 0; top: 0; background: #eee; font-size: 0;}
 #footer .ft_top ul li.more.on .ft_close_btn a {display: block;}
 #footer .ft_top ul li.more .ft_close_btn a:before {content: ''; display: block; position: absolute; left:50%; top:50%; transform: translate(-50%,-50%); width: 11px; height: 11px; background: url(../img/iconset_main2.png) no-repeat; background-position: -175px -50px;}
 
@@ -570,6 +570,7 @@ h3 {font-family: 'Raleway', sans-serif;}
     #footer .ft_top ul li.more a {text-align: left;}
     #footer .ft_top ul li.more ul li {width: 100%; margin: 0; height: 30px;}
     #footer .ft_top ul li.more ul li a {font-size: 11px;}
+	#footer .ft_top ul li.more .ft_close_btn a {height: 38px;}
     #footer .ft_bottom {padding-left: 10px;}
     #footer .ft_bottom p {width: 75%;}
     #footer .ft_bottom .mark {width: 50px; right: 10px;}
