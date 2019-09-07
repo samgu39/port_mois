@@ -610,9 +610,11 @@ function favoriteSave(){
     // 자주 찾는 정보 중 체크되어있는 값만을 띄워주기
 
 function favoriteReset(){
-    var checkBox = $('.favorite .favorite_more ul li input:checkbox[type="checkbox"]:checked');
-    
-    checkBox.removeAttr("checked");
+	var checkBox = document.querySelectorAll('.favorite .favorite_more ul li input');
+	
+	for (var i = 0; i < checkBox.length; ++i){
+		checkBox[i].checked = false;
+	};
 };
 
     // 초기화 버튼 클릭 시 체크된 값 리셋
