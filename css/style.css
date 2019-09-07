@@ -433,6 +433,7 @@ h3 {font-family: 'Raleway', sans-serif;}
     .banner_list .more a {background-position: -92px 8px;}
     #footer .ft_top {border-bottom: none; height: 121px;}
     #footer .ft_top ul li:nth-child(8) {width: 100%; border-left:1px solid #ccc; border-right: 0;}
+	#footer .ft_top ul li:nth-child(9), #footer .ft_top ul li:nth-child(10) {width: 100%;}
     #footer .ft_top ul li.more {width: 50%; border: 1px solid #ccc; margin:10px 0;}
     #footer .ft_top ul li:nth-child(9) {border-right: none;}
     #footer .ft_bottom .mark {top: 20px;}
