@@ -412,6 +412,14 @@ window.onload = function(){
     
 };
 
+var checkBoxOn = document.querySelectorAll('.favorite .favorite_more ul li input');
+
+for(var i = 0; i < 8 ; i++){
+	checkBoxOn[i].checked = true;
+};
+
+// 자주 찾는 정보 더보기 기본값 8개 체크 표시
+
 function favoriteSave(){
     var checkBox = $('.favorite .favorite_more ul li input:checkbox[type="checkbox"]:checked');
     var moreFavoriteBox = document.querySelector('.favorite .favorite_more');
